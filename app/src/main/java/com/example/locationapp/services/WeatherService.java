@@ -6,6 +6,8 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface WeatherService {
-    @GET("/cities/{id}")
-    Call<City> getCity(String id);
+    @GET("/data/2.5/weather")
+    Call<City> getCityById(@Query("id") String id, @Query("appid") String appid);
+    @GET("/data/2.5/weather")
+    Call<City> getCityByName(@Query("q") String name, @Query("appid") String appid);
 }
