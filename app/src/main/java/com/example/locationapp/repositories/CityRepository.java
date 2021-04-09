@@ -14,8 +14,4 @@ public class CityRepository {
     ) {
         this.weatherService = weatherService;
     }
-
-    public Call<City> getUserById(String id) {
-        return weatherService.getCityById(id,"");
-    }
 }

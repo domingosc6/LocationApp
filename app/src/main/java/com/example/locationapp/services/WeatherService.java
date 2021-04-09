@@ -10,4 +10,6 @@ public interface WeatherService {
     Call<City> getCityById(@Query("id") String id, @Query("appid") String appid);
     @GET("/data/2.5/weather")
     Call<City> getCityByName(@Query("q") String name, @Query("appid") String appid);
+    @GET("/data/2.5/weather")
+    Call<City> getCityByCoord(@Query("lat") String latitude, @Query("lon") String longitude, @Query("appid") String appid);
 }
