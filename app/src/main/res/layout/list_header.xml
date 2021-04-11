@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/cardview_shadow_start_color"
+    android:background="@android:color/transparent"
     android:clipToPadding="false"
     android:orientation="horizontal"
     android:paddingLeft="16dp"
@@ -20,34 +20,40 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-
         <TextView android:layout_width="150dp"
             android:layout_height="match_parent"
-            android:id="@+id/city_row_name"
+            android:id="@+id/city_row_name_header"
             android:autoSizeTextType="uniform"
             android:autoSizeMinTextSize="10sp"
-            android:autoSizeMaxTextSize="20sp"
+            android:autoSizeMaxTextSize="18sp"
             android:autoSizeStepGranularity="1sp"
             android:textSize="18sp"
+            android:text="@string/city_row_name_header"
             android:gravity="center"/>
 
         <TextView
             android:layout_width="120dp"
             android:layout_height="match_parent"
-            android:id="@+id/city_row_current_temp"
+            android:id="@+id/city_row_current_temp_header"
             android:autoSizeTextType="uniform"
             android:autoSizeMinTextSize="10sp"
-            android:autoSizeMaxTextSize="20sp"
+            android:autoSizeMaxTextSize="18sp"
             android:autoSizeStepGranularity="1sp"
             android:textSize="18sp"
+            android:text="@string/city_row_current_temp_header"
             android:gravity="center"/>
 
-        <ImageView
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:gravity="center"
-            android:id="@+id/city_row_weather_icon"/>
-
+            android:id="@+id/city_row_weather_icon_header"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeMaxTextSize="18sp"
+            android:autoSizeStepGranularity="1sp"
+            android:textSize="18sp"
+            android:text="@string/city_row_weather_icon_header"
+            android:gravity="center"/>
     </LinearLayout>
 
 </com.google.android.material.card.MaterialCardView>

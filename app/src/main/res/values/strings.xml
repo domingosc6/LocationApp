@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">LocationApp</string>
+    <string name="city_row_name_header">City Name</string>
+    <string name="city_row_current_temp_header">Temperature</string>
+    <string name="city_row_weather_icon_header">Weather Status</string>
+    <string name="city_air_pressure_label">Air Pressure</string>
+    <string name="city_air_humidity_label">Air Humidity</string>
+    <string name="city_sunrise_label">Sunrise</string>
+    <string name="city_sunset_label">Sunset</string>
 </resources>

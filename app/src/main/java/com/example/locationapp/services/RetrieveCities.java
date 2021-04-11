@@ -1,10 +1,17 @@
 package com.example.locationapp.services;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
+import android.util.Log;
+import android.widget.ImageView;
 
 import com.example.locationapp.model.City;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+
+import java.io.InputStream;
+import java.util.Date;
 
 import retrofit2.Call;
 import retrofit2.Response;
@@ -30,13 +37,14 @@ public class RetrieveCities extends AsyncTask<String, Void, City> {
             Response<City> response = call.execute();
             if(response.isSuccessful()) {
                 city = response.body();
+                System.out.println(city.getName());
+                System.out.println(city.getSunriseFormatted());
+                System.out.println(city.getSunsetFormatted());
             } else {
                 city = null;
-                System.out.println(response.errorBody());
             }
         } catch (Exception e) {
             this.exception = e;
-            city = null;
             return null;
         }
         return city;

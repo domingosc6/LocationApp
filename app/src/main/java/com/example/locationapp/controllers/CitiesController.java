@@ -14,7 +14,10 @@ import com.example.locationapp.services.RetrieveCities;
 
 
 public class CitiesController extends android.app.Application {
-    private static final ArrayList<String> citiesNames = new ArrayList<>(Arrays.asList("Lisbon", "Madrid", "Paris", "Berlin", "Copenhagen", "Rome", "London", "Dublin", "Prague", "Vienna"));
+    private static final ArrayList<String> citiesNames = new ArrayList<>(Arrays.asList(
+            "Lisbon", "Madrid", "Paris",
+            "Berlin", "Copenhagen", "Rome", "London",
+            "Dublin", "Prague", "Vienna"));
     ArrayList<City> listOfCities;
 
     public ArrayList<City> getCitiesForMainActivity() throws IOException {
